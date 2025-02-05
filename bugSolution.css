@@ -1,0 +1,13 @@
+To resolve this, ensure that the extra space taken up by the `box-shadow` is considered in the layout. One approach is to use the `box-sizing` property.  By setting `box-sizing: border-box;`, the padding and border are included within the element's specified width and height.  This makes the `box-shadow` less likely to cause unexpected layout problems:
+
+```css
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  box-shadow: 10px 10px 5px #888888;
+  box-sizing: border-box;
+}
+```
+
+Alternatively, you can explicitly account for the `box-shadow` offset in your layout calculations.
