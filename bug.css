@@ -1,0 +1,12 @@
+The following CSS code snippet demonstrates an issue where the `box-shadow` property unexpectedly affects the dimensions of the element, extending beyond the specified width and height:
+
+```css
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  box-shadow: 10px 10px 5px #888888;
+}
+```
+
+The `box-shadow` is applied outside the element's dimensions. This can lead to layout issues if not accounted for.
